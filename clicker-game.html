@@ -1,0 +1,43 @@
+<DOCTYPE! html>
+<html>
+ <title> Yes </title>
+ <head>
+ <script src="https://simplycodingcourses.com/files/simplyjs/simply.js"> </script>
+ <script>
+  function start() {
+   var score = 0;
+   var clickpower = 1;
+   function structure() {
+    sjs.open("target", 900, 500);
+    var scoredisplay = new sjs.Text(score + "$", 50, "black")
+   };
+   function OneClick() {
+    alert(score)
+    score = score + clickpower
+    alert(score)
+    scoredisplay.setText(score + "$")
+   };
+   structure();
+  };
+ </script>
+ <body onload="start()">
+  <button class="button"; onclick=OneClick()>CLICK</button>
+  <div id="target" style="background:lightgray;">
+  </div>
+  <style>
+   .button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+   }
+   .button:hover {
+    background-color: green;
+   }
+  </style>
+ </body>
+<html>
