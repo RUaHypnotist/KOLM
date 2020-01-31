@@ -16,7 +16,7 @@
   background-color: green;
 }
 
-.header {
+#header {
   position: fixed;
   font-family: serif;
   font-size: 50px;
