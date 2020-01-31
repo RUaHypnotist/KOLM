@@ -1,7 +1,7 @@
 var score = 0;
 var clickpower = 1;
 function OneClick() {
-  score = score + clickpower
+  score += clickpower;
   document.getElementById("header").innerHTML = "$" + score; 
 };
 
