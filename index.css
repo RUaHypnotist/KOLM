@@ -22,3 +22,9 @@
   left: 25px;
   bottom: 23.4%;
 }
+
+#upgradebox {
+  position:fixed;
+  background-color:gray;
+  width: 500px;
+  height: auto;
