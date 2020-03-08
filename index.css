@@ -1,0 +1,106 @@
+#body {
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fih0.redbubble.net%2Fimage.134398639.2161%2Fflat%2C800x800%2C075%2Cf.u1.jpg&f=1&nofb=1");
+  overflow: hidden;
+}
+ .clickBox {
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Forig12.deviantart.net%2Fa10e%2Ff%2F2015%2F255%2Fb%2F7%2Fcs_go_fade_by_malejkandy-d99aswi.jpg&f=1&nofb=1");
+  filter:blur(3px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  color: black;
+  padding: 15px 100px;
+  position: fixed;
+  left: 5%;
+  bottom: 3%;
+  font-family: courier;
+  text-align: center;
+  font-size: 75px;
+  cursor: pointer;
+  border: 6px solid white;
+ }
+ .clickBox:hover {
+  filter:blur(0px);
+ }
+ #header {
+  position: fixed;
+  color: white;
+  font-family: courier;
+  font-size: 50px;
+  bottom: 15%;
+  left: 5%;
+ }
+ #upgradebox {
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimg06.deviantart.net%2Fe080%2Fi%2F2015%2F214%2Fe%2Fe%2Fcs_go_crimson_web_by_returacan-d93xgre.jpg&f=1&nofb=1");
+  color: white;
+  position: fixed;
+  border: 6px double white;
+  height: 90%;
+  width: 40%;
+  right: 2.5%;
+  top: 3%;
+  overflow-y: scroll;
+  padding: 15px;
+  overflow-x: hidden;
+ }
+ .upgrade {
+  position: relative;
+  display: block;
+  width: 98%;
+  height: 10%;
+  text-align: left;
+  border: 4px solid white;
+  font-family: courier;
+  font-size: 200%;
+  padding-left: 10px;
+  padding-top: 5px;
+  margin-bottom: 15px;
+ }
+ #meeparmy {
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimg06.deviantart.net%2Fe080%2Fi%2F2015%2F214%2Fe%2Fe%2Fcs_go_crimson_web_by_returacan-d93xgre.jpg&f=1&nofb=1");
+  position: fixed;
+  display: block;
+  top: 14%;
+  left: 5%;
+  border: 6px double white;
+  width: 45%;
+  height: 55%;
+  padding: 15px;
+  font-family: courier;
+ }
+ #meeparmy_label{
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimg06.deviantart.net%2Fe080%2Fi%2F2015%2F214%2Fe%2Fe%2Fcs_go_crimson_web_by_returacan-d93xgre.jpg&f=1&nofb=1");
+  color: white;
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  width: 45.6%;
+  height: 5%;
+  border: 6px double white;
+  padding: 10px;
+  text-align: center;
+  font-family: courier;
+  font-size: 250%;
+ }
+ .buybutton {
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Forig12.deviantart.net%2Fa10e%2Ff%2F2015%2F255%2Fb%2F7%2Fcs_go_fade_by_malejkandy-d99aswi.jpg&f=1&nofb=1");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: black;
+  position: absolute;
+  top: 17.5%;
+  right: 5%;
+  width: 25%;
+  height: 65%;
+  border: 4px solid white;
+  font-family: courier;
+  font-size: 150%;
+  opacity: 0.9;
+  filter:blur(2.5px);
+  filter:brightness(50%);
+ }
+ .buybutton:hover {
+  opacity: 1.0;
+  filter:blur(0px);
+  filter:brightness(65%);
+ }
