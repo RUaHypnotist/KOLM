@@ -1,5 +1,7 @@
 #body {
   background-image: url("decimator_background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   overflow: hidden;
 }
  .clickBox {
