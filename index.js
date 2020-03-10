@@ -3,6 +3,8 @@ var clickpower = 1;
 var meeplingPrice = 15;
 var mrmeepPrice = 100;
 var meepmagePrice = 1000;
+var totalmrmps = 0;
+var totalmpmgs = 0;
 function initScore() {
  document.getElementById("header").innerHTML = "$" + score;
  setInterval(function(){
@@ -21,9 +23,34 @@ function initScore() {
   } else {
    document.getElementById("mpmageupbtn").style.filter = "brightness(50%)"
   };
+  score += totalmrmps/20;
+  score += totalmpmgs/5;
+  document.getElementById("header").innerHTML = "$" + Math.round(score);
  }, 10);
 };
 function OneClick() {
  score += clickpower;
  document.getElementById("header").innerHTML = "$" + score;
+};
+function meeplingUp() {
+ if (score >= meeplingPrice) {
+  clickpower ++;
+  score -= meeplingPrice;
+  meeplingPrice *= 2;
+  document.getElementById("header").innerHTML = "$" + Math.round(score);
+ };
+};
+function mrmeepUp() {
+ if (score >= mrmeepPrice) {
+  totalmrmps ++;
+  score -= mrmeepPrice;
+  mrmeepPrice *= 2;
+ };
+};
+function meepmageUp() {
+ if (score >= meepmagePrice) {
+  totalmpmgs ++;
+  score -= meepmagePrice;
+  meepmagePrice *= 2;
+ };
 };
