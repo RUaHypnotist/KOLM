@@ -23,7 +23,7 @@ function initScore() {
   } else {
    document.getElementById("mpmageupbtn").style.filter = "brightness(50%)"
   };
-  score += totalmrmps/100;
+  score += totalmrmps/75;
   score += totalmpmgs/5;
   document.getElementById("header").innerHTML = "$" + Math.round(score);
  }, 10);
@@ -36,7 +36,7 @@ function meeplingUp() {
  if (score >= meeplingPrice) {
   clickpower ++;
   score -= meeplingPrice;
-  meeplingPrice *= 2;
+  meeplingPrice *= 1.5;
   document.getElementById("header").innerHTML = "$" + Math.round(score);
  };
 };
@@ -44,13 +44,15 @@ function mrmeepUp() {
  if (score >= mrmeepPrice) {
   totalmrmps ++;
   score -= mrmeepPrice;
-  mrmeepPrice *= 2;
+  mrmeepPrice *= 1.5;
+  document.getElementById("header").innerHTML = "$" + Math.round(score);
  };
 };
 function meepmageUp() {
  if (score >= meepmagePrice) {
   totalmpmgs ++;
   score -= meepmagePrice;
-  meepmagePrice *= 2;
+  meepmagePrice *= 1.5;
+  document.getElementById("header").innerHTML = "$" + Math.round(score);
  };
 };
