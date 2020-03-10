@@ -23,7 +23,7 @@ function initScore() {
   } else {
    document.getElementById("mpmageupbtn").style.filter = "brightness(50%)"
   };
-  score += totalmrmps/20;
+  score += totalmrmps/100;
   score += totalmpmgs/5;
   document.getElementById("header").innerHTML = "$" + Math.round(score);
  }, 10);
