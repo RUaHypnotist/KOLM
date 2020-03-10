@@ -30,7 +30,7 @@ function initScore() {
 };
 function OneClick() {
  score += clickpower;
- document.getElementById("header").innerHTML = "$" + score;
+ document.getElementById("header").innerHTML = "$" + Math.round(score);
 };
 function meeplingUp() {
  if (score >= meeplingPrice) {
