@@ -91,7 +91,7 @@ function meepmageUp() {
  };
 };
 function megameepUp() {
- if (score >= meepmagePrice) {
+ if (score >= megameepPrice) {
   totalmgmps ++;
   score -= megameepPrice;
   megameepPrice *= 1.5;
