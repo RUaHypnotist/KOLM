@@ -19,37 +19,37 @@ function initScore() {
   if (score >= meeplingPrice) {
    document.getElementById("mplingupbtn").style.filter = "brightness(100%)";
   } else {
-   document.getElementById("mplingupbtn").style.filter = "brightness(50%)"
+   document.getElementById("mplingupbtn").style.filter = "brightness(50%)";
   };
   if (score >= mrmeepPrice) {
    document.getElementById("mrmpupbtn").style.filter = "brightness(100%)";
   } else{
-   document.getElementById("mrmpupbtn").style.filter = "brightness(50%)"
+   document.getElementById("mrmpupbtn").style.filter = "brightness(50%)";
   };
   if (score >= meepmagePrice) {
    document.getElementById("mpmageupbtn").style.filter = "brightness(100%)";
   } else {
-   document.getElementById("mpmageupbtn").style.filter = "brightness(50%)"
+   document.getElementById("mpmageupbtn").style.filter = "brightness(50%)";
   };
   if (score >= megameepPrice) {
    document.getElementById("mgmpupbtn").style.filter = "brightness(100%)";
   } else {
-   document.getElementById("mgmpupbtn").style.filter = "brightness(50%)"
+   document.getElementById("mgmpupbtn").style.filter = "brightness(50%)";
   };
   if (score >= demonmeepPrice) {
    document.getElementById("dmnmpupbtn").style.filter = "brightness(100%)";
   } else {
-   document.getElementById("dmnmpupbtn").style.filter = "brightness(50%)"
+   document.getElementById("dmnmpupbtn").style.filter = "brightness(50%)";
   };
   if (score >= meepgodPrice) {
    document.getElementById("mpgdupbtn").style.filter = "brightness(100%)";
   } else {
-   document.getElementById("mpgdupbtn").style.filter = "brightness(50%)"
+   document.getElementById("mpgdupbtn").style.filter = "brightness(50%)";
   };
   if (score >= antimattermeepPrice) {
    document.getElementById("ntmtrupbtn").style.filter = "brightness(100%)";
   } else {
-   document.getElementById("ntmtrupbtn").style.filter = "brightness(50%)"
+   document.getElementById("ntmtrupbtn").style.filter = "brightness(50%)";
   };
   score += totalmrmps/100;
   score += totalmpmgs/15;
@@ -96,7 +96,7 @@ function megameepUp() {
   score -= megameepPrice;
   megameepPrice *= 1.5;
  } else {
-  document.getElementById("mgmpupbtn").style.filter = "brightness(50%)"
+  document.getElementById("mgmpupbtn").style.filter = "brightness(50%)";
  };
 };
 function demonmeepUp() {
@@ -123,6 +123,6 @@ function antimattermeepUp() {
   score -= antimattermeepPrice;
   antimattermeepPrice *= 1.5;
  } else {
-  document.getElementById("ntmtrupbtn").style.filter = "brightness(50%)"
+  document.getElementById("ntmtrupbtn").style.filter = "brightness(50%)";
  };
 };
