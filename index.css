@@ -1,11 +1,11 @@
 #body {
   background-image: url("decimator_background.jpg");
+  overflow: hidden;
   background-size: cover;
   background-repeat: no-repeat;
-  overflow: hidden;
 }
  .clickBox {
-  background-image: url("fade_background.jpg");
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Forig12.deviantart.net%2Fa10e%2Ff%2F2015%2F255%2Fb%2F7%2Fcs_go_fade_by_malejkandy-d99aswi.jpg&f=1&nofb=1");
   filter:blur(3px);
   background-size: cover;
   background-repeat: no-repeat;
@@ -33,7 +33,7 @@
   left: 5%;
  }
  #upgradebox {
-  background-image: url("crimson_web_background.jpg");
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimg06.deviantart.net%2Fe080%2Fi%2F2015%2F214%2Fe%2Fe%2Fcs_go_crimson_web_by_returacan-d93xgre.jpg&f=1&nofb=1");
   color: white;
   position: fixed;
   border: 6px double white;
@@ -59,7 +59,7 @@
   margin-bottom: 15px;
  }
  #meeparmy {
-  background-image: url("crimson_web_background.jpg");
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimg06.deviantart.net%2Fe080%2Fi%2F2015%2F214%2Fe%2Fe%2Fcs_go_crimson_web_by_returacan-d93xgre.jpg&f=1&nofb=1");
   position: fixed;
   display: block;
   top: 14%;
@@ -69,9 +69,11 @@
   height: 55%;
   padding: 15px;
   font-family: courier;
+  overflow-x: auto;
+  overflow-y: scroll;
  }
  #meeparmy_label{
-  background-image: url("crimson_web_background.jpg");
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimg06.deviantart.net%2Fe080%2Fi%2F2015%2F214%2Fe%2Fe%2Fcs_go_crimson_web_by_returacan-d93xgre.jpg&f=1&nofb=1");
   color: white;
   position: fixed;
   top: 5%;
@@ -85,7 +87,7 @@
   font-size: 250%;
  }
  .buybutton {
-  background-image: url("fade_background.jpg");
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Forig12.deviantart.net%2Fa10e%2Ff%2F2015%2F255%2Fb%2F7%2Fcs_go_fade_by_malejkandy-d99aswi.jpg&f=1&nofb=1");
   background-size: cover;
   background-repeat: no-repeat;
   color: black;
@@ -105,4 +107,18 @@
   opacity: 1.0;
   filter:blur(0px);
   filter:brightness(65%);
+ }
+ .armylabels {
+  padding-top: 1%;
+  padding-left: 2.5%;
+  font-size: 200%;
+  text-align: left;
+  font-family: courier;
+  color: white;
+  border: 3px solid white;
+  display: block;
+  position: relative;
+  width: 95%;
+  margin-left: 1%;
+  margin-bottom: 2.5%;
  }
