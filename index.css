@@ -5,7 +5,7 @@
   background-repeat: no-repeat;
 }
  .clickBox {
-  background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Forig12.deviantart.net%2Fa10e%2Ff%2F2015%2F255%2Fb%2F7%2Fcs_go_fade_by_malejkandy-d99aswi.jpg&f=1&nofb=1");
+  background-image: url("fade_background.jpg");
   filter:blur(3px);
   background-size: cover;
   background-repeat: no-repeat;
@@ -33,7 +33,7 @@
   left: 5%;
  }
  #upgradebox {
-  background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimg06.deviantart.net%2Fe080%2Fi%2F2015%2F214%2Fe%2Fe%2Fcs_go_crimson_web_by_returacan-d93xgre.jpg&f=1&nofb=1");
+  background-image: url("fade_background.jpg");
   color: white;
   position: fixed;
   border: 6px double white;
@@ -59,7 +59,7 @@
   margin-bottom: 15px;
  }
  #meeparmy {
-  background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimg06.deviantart.net%2Fe080%2Fi%2F2015%2F214%2Fe%2Fe%2Fcs_go_crimson_web_by_returacan-d93xgre.jpg&f=1&nofb=1");
+  background-image: url("crimson_web_background.jpg");
   position: fixed;
   display: block;
   top: 14%;
@@ -73,7 +73,7 @@
   overflow-y: scroll;
  }
  #meeparmy_label{
-  background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimg06.deviantart.net%2Fe080%2Fi%2F2015%2F214%2Fe%2Fe%2Fcs_go_crimson_web_by_returacan-d93xgre.jpg&f=1&nofb=1");
+  background-image: url("crimson_web_background.jpg");
   color: white;
   position: fixed;
   top: 5%;
@@ -87,7 +87,7 @@
   font-size: 250%;
  }
  .buybutton {
-  background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Forig12.deviantart.net%2Fa10e%2Ff%2F2015%2F255%2Fb%2F7%2Fcs_go_fade_by_malejkandy-d99aswi.jpg&f=1&nofb=1");
+  background-image: url("fade_background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   color: black;
