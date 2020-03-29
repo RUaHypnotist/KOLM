@@ -81,12 +81,49 @@ function initScore() {
   } else {
     document.getElementById("ntmtrarmy").style.display = "none"
   };
+  if (clickpower > 1) {
+    document.getElementById("mplingupgrd").style.display = "block"
+  } else {
+    document.getElementById("mplingupgrd").style.display = "none"
+  };
+  if (totalmrmps > 0) {
+    document.getElementById("mrmpupgrd").style.display = "block"
+  } else {
+    document.getElementById("mrmpupgrd").style.display = "none"
+  };
+  if (totalmpmgs > 0) {
+    document.getElementById("mgmpupgrd").style.display = "block"
+  } else {
+    document.getElementById("mgmpupgrd").style.display = "none"
+  };
+  if (totalmgmps > 0) {
+    document.getElementById("dmnmpupgrd").style.display = "block"
+  } else {
+    document.getElementById("dmnmpupgrd").style.display = "none"
+  };
+  if (totaldmnmps > 0) {
+    document.getElementById("mpgdupgrd").style.display = "block"
+  } else {
+    document.getElementById("mpgdupgrd").style.display = "none"
+  };
+  if (totalmpgds > 0) {
+    document.getElementById("ntmtrupgrd").style.display = "block"
+  } else {
+    document.getElementById("ntmtrupgrd").style.display = "none"
+  };
   score += totalmrmps/100;
   score += totalmpmgs/15;
   score += totalmgmps*5;
   score += totaldmnmps*150;
   score += totalmpgds*10000;
   score += totalntmtrs*1000000;
+  document.getElementById("mplingPrice").innerHTML = "$" + Math.round(meeplingPrice);
+  document.getElementById("mrmpPrice").innerHTML = "$" + Math.round(mrmeepPrice);
+  document.getElementById("mpmgPrice").innerHTML = "$" + Math.round(meepmagePrice);
+  document.getElementById("mgmpPrice").innerHTML = "$" + Math.round(megameepPrice);
+  document.getElementById("dmnmpPrice").innerHTML = "$" + Math.round(demonmeepPrice);
+  document.getElementById("mpgdPrice").innerHTML = "$" + Math.round(meepgodPrice);
+  document.getElementById("ntmtrmpPrice").innerHTML = "$" + Math.round(antimattermeepPrice);
   document.getElementById("header").innerHTML = "$" + Math.round(score);
  }, 10);
 };
