@@ -1,77 +1,195 @@
-<DOCTYPE! html>
-<html lang="en"> 
-  <head>
-    <meta charset="UTF-8"></meta>
-    <title> Meep Clicker </title>
-    <script src="index.js"></script>
-    <link rel="stylesheet" type="text/css" href="index.css">
-  </head>
-  <body id="body" onLoad="initScore()">
-    <div id="meeparmy_label">
-     <b> Meep Army! </b>
-    </div>
-    <div id="meeparmy">
-      <div class="armylabels"; id="mplingarmy">
-        <b> Meeplings! </b>
-      </div>
-      <div class="armylabels"; id="mrmparmy">
-        <b> Mr. Meeps! </b>
-      </div>
-      <div class="armylabels"; id="mpmgarmy">
-        <b> Meep Mages </b>
-      </div>
-      <div class="armylabels"; id="mgmparmy">
-        <b> Mega Meeps! </b>
-      </div>
-      <div class="armylabels"; id="dmnmparmy">
-        <b> Demon Meeps! </b>
-      </div>
-      <div class="armylabels"; id="mpgdarmy">
-        <b> Meep Gods! </b>
-      </div>
-      <div class="armylabels"; id="ntmtrarmy">
-        <b> Antimatter Meeps! </b>
-      </div>
-    </div>
-    <div id="upgradebox">
-     <div class="upgrade"; id="mplingupgrd">
-      <b> Extra Meepling! </b>
-      <b class="pricetag"; id="mplingPrice"></b>
-      <button class="buybutton"; id="mplingupbtn"; onclick=meeplingUp()>BUY</button>
-     </div>
-     <div class="upgrade"; id="mrmpupgrd">
-      <b> Mr. Meep! </b>
-      <b class="pricetag"; id="mrmpPrice"></b>
-      <button class="buybutton"; id="mrmpupbtn"; onclick=mrmeepUp()>BUY</button>
-     </div>
-     <div class="upgrade"; id="mpmgupgrd">
-      <b> Meep Mage! </b>
-      <b class="pricetag"; id="mpmgPrice"></b>
-      <button class="buybutton"; id="mpmageupbtn"; onclick=meepmageUp()>BUY</button>
-     </div>
-     <div class="upgrade"; id="mgmpupgrd">
-      <b> Mega Meep! </b>
-      <b class="pricetag"; id="mgmpPrice"></b>
-      <button class="buybutton"; id="mgmpupbtn"; onclick=megameepUp()>BUY</button>
-     </div>
-     <div class="upgrade"; id="dmnmpupgrd">
-      <b> Demon Meep! </b>
-      <b class="pricetag"; id="dmnmpPrice"></b>
-      <button class="buybutton"; id="dmnmpupbtn"; onclick=demonmeepUp()>BUY</button>
-     </div>
-     <div class="upgrade"; id="mpgdupgrd">
-      <b> Meep God! </b>
-      <b class="pricetag"; id="mpgdPrice"></b>
-      <button class="buybutton"; id="mpgdupbtn"; onclick=meepgodUp()>BUY</button>
-     </div>
-     <div class="upgrade"; id="ntmtrupgrd">
-      <b> Antimatter Meep! </b>
-      <b class="pricetag"; id="ntmtrmpPrice"></b>
-      <button class="buybutton"; id="ntmtrupbtn"; onclick=antimattermeepUp()>BUY</button>
-     </div>
-    </div>
-  </body>
-    <button class="clickBox"; onclick=OneClick()>CLICK</button>
-    <h1 id="header"></h1>
-  </body>
-</html>
+var score = 0;
+var clickpower = 1;
+var meeplingPrice = 15;
+var mrmeepPrice = 100;
+var meepmagePrice = 1000;
+var megameepPrice = 50000;
+var demonmeepPrice = 100000;
+var meepgodPrice = 500000;
+var antimattermeepPrice = 1000000;
+var totalmrmps = 0;
+var totalmpmgs = 0;
+var totalmgmps = 0;
+var totaldmnmps = 0;
+var totalmpgds = 0;
+var totalntmtrs = 0;
+function initScore() {
+ document.getElementById("header").innerHTML = "$" + score;
+ setInterval(function(){
+  if (score >= meeplingPrice) {
+   document.getElementById("mplingupbtn").style.filter = "brightness(100%)";
+  } else {
+   document.getElementById("mplingupbtn").style.filter = "brightness(50%)"
+  };
+  if (score >= mrmeepPrice) {
+   document.getElementById("mrmpupbtn").style.filter = "brightness(100%)";
+  } else{
+   document.getElementById("mrmpupbtn").style.filter = "brightness(50%)"
+  };
+  if (score >= meepmagePrice) {
+   document.getElementById("mpmageupbtn").style.filter = "brightness(100%)";
+  } else {
+   document.getElementById("mpmageupbtn").style.filter = "brightness(50%)"
+  };
+  if (score >= megameepPrice) {
+   document.getElementById("mgmpupbtn").style.filter = "brightness(100%)";
+  } else {
+   document.getElementById("mgmpupbtn").style.filter = "brightness(50%)"
+  };
+  if (score >= demonmeepPrice) {
+   document.getElementById("dmnmpupbtn").style.filter = "brightness(100%)";
+  } else {
+   document.getElementById("dmnmpupbtn").style.filter = "brightness(50%)"
+  };
+  if (score >= meepgodPrice) {
+   document.getElementById("mpgdupbtn").style.filter = "brightness(100%)";
+  } else {
+   document.getElementById("mpgdupbtn").style.filter = "brightness(50%)"
+  };
+  if (score >= antimattermeepPrice) {
+   document.getElementById("ntmtrupbtn").style.filter = "brightness(100%)";
+  } else {
+   document.getElementById("ntmtrupbtn").style.filter = "brightness(50%)"
+  };
+  if (totalmrmps > 0) {
+    document.getElementById("mrmparmy").style.display = "block"
+  } else {
+    document.getElementById("mrmparmy").style.display = "none"
+  };
+  if (totalmpmgs > 0) {
+    document.getElementById("mpmgarmy").style.display = "block"
+  } else {
+    document.getElementById("mpmgarmy").style.display = "none"
+  };
+  if (totalmgmps > 0) {
+    document.getElementById("mgmparmy").style.display = "block"
+  } else {
+    document.getElementById("mgmparmy").style.display = "none"
+  };
+  if (totaldmnmps > 0) {
+    document.getElementById("dmnmparmy").style.display = "block"
+  } else {
+    document.getElementById("dmnmparmy").style.display = "none"
+  };
+  if (totalmpgds > 0) {
+    document.getElementById("mpgdarmy").style.display = "block"
+  } else {
+    document.getElementById("mpgdarmy").style.display = "none"
+  };
+  if (totalntmtrs > 0) {
+    document.getElementById("ntmtrarmy").style.display = "block"
+  } else {
+    document.getElementById("ntmtrarmy").style.display = "none"
+  };
+  if (clickpower > 1) {
+    document.getElementById("mrmpupgrd").style.display = "block"
+  } else {
+    document.getElementById("mrmpupgrd").style.display = "none"
+  };
+  if (totalmrmps > 0) {
+    document.getElementById("mpmgupgrd").style.display = "block"
+  } else {
+    document.getElementById("mpmgupgrd").style.display = "none"
+  };
+  if (totalmpmgs > 0) {
+    document.getElementById("mgmpupgrd").style.display = "block"
+  } else {
+    document.getElementById("mgmpupgrd").style.display = "none"
+  };
+  if (totalmgmps > 0) {
+    document.getElementById("dmnmpupgrd").style.display = "block"
+  } else {
+    document.getElementById("dmnmpupgrd").style.display = "none"
+  };
+  if (totaldmnmps > 0) {
+    document.getElementById("mpgdupgrd").style.display = "block"
+  } else {
+    document.getElementById("mpgdupgrd").style.display = "none"
+  };
+  if (totalmpgds > 0) {
+    document.getElementById("ntmtrupgrd").style.display = "block"
+  } else {
+    document.getElementById("ntmtrupgrd").style.display = "none"
+  };
+  score += totalmrmps/100;
+  score += totalmpmgs/15;
+  score += totalmgmps*5;
+  score += totaldmnmps*150;
+  score += totalmpgds*10000;
+  score += totalntmtrs*1000000;
+  document.getElementById("mplingPrice").innerHTML = "$" + Math.round(meeplingPrice);
+  document.getElementById("mrmpPrice").innerHTML = "$" + Math.round(mrmeepPrice);
+  document.getElementById("mpmgPrice").innerHTML = "$" + Math.round(meepmagePrice);
+  document.getElementById("mgmpPrice").innerHTML = "$" + Math.round(megameepPrice);
+  document.getElementById("dmnmpPrice").innerHTML = "$" + Math.round(demonmeepPrice);
+  document.getElementById("mpgdPrice").innerHTML = "$" + Math.round(meepgodPrice);
+  document.getElementById("ntmtrmpPrice").innerHTML = "$" + Math.round(antimattermeepPrice);
+  document.getElementById("header").innerHTML = "$" + Math.round(score);
+ }, 10);
+};
+function OneClick() {
+ score += clickpower;
+ document.getElementById("header").innerHTML = "$" + Math.round(score);
+};
+function meeplingUp() {
+ if (score >= meeplingPrice) {
+  clickpower ++;
+  score -= meeplingPrice;
+  meeplingPrice *= 1.5;
+  document.getElementById("header").innerHTML = "$" + Math.round(score);
+ };
+};
+function mrmeepUp() {
+ if (score >= mrmeepPrice) {
+  totalmrmps ++;
+  score -= mrmeepPrice;
+  mrmeepPrice *= 1.5;
+ } else {
+  document.getElementById("mrmpupbtn").style.filter = "brightness(50%)"
+ };
+};
+function meepmageUp() {
+ if (score >= meepmagePrice) {
+  totalmpmgs ++;
+  score -= meepmagePrice;
+  meepmagePrice *= 1.5;
+ } else {
+  document.getElementById("mpmageupbtn").style.filter = "brightness(50%)"
+ };
+};
+function megameepUp() {
+ if (score >= meepmagePrice) {
+  totalmgmps ++;
+  score -= megameepPrice;
+  megameepPrice *= 1.5;
+ } else {
+  document.getElementById("mgmpupbtn").style.filter = "brightness(50%)"
+ };
+};
+function demonmeepUp() {
+ if (score >= demonmeepPrice) {
+  totaldmnmps ++;
+  score -= demonmeepPrice;
+  demonmeepPrice *= 1.5;
+ } else {
+  document.getElementById("dmnmpupbtn").style.filter = "brightness(50%)"
+ };
+};
+function meepgodUp() {
+ if (score >= meepgodPrice) {
+  totalmpgds ++;
+  score -= meepgodPrice;
+  meepgodPrice *= 1.5;
+ } else {
+  document.getElementById("mpgdupbtn").style.filter = "brightness(50%)"
+ };
+};
+function antimattermeepUp() {
+ if (score >= antimattermeepPrice) {
+  totalntmtrs ++;
+  score -= antimattermeepPrice;
+  antimattermeepPrice *= 1.5;
+ } else {
+  document.getElementById("ntmtrupbtn").style.filter = "brightness(50%)"
+ };
+};
