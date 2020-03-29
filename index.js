@@ -82,14 +82,14 @@ function initScore() {
     document.getElementById("ntmtrarmy").style.display = "none"
   };
   if (clickpower > 1) {
-    document.getElementById("mplingupgrd").style.display = "block"
-  } else {
-    document.getElementById("mplingupgrd").style.display = "none"
-  };
-  if (totalmrmps > 0) {
     document.getElementById("mrmpupgrd").style.display = "block"
   } else {
     document.getElementById("mrmpupgrd").style.display = "none"
+  };
+  if (totalmrmps > 0) {
+    document.getElementById("mpmgupgrd").style.display = "block"
+  } else {
+    document.getElementById("mpmgupgrd").style.display = "none"
   };
   if (totalmpmgs > 0) {
     document.getElementById("mgmpupgrd").style.display = "block"
